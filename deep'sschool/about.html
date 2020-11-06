@@ -1,0 +1,310 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimun-scale=1.0" />
+
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js">
+    </script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- FONT AWESOME CSS -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- FLEXSLIDER CSS -->
+    <link href="assets/css/flexslider.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css' />
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80%;
+            margin: auto;
+            margin-top: 50px;
+        }
+        
+        .our-team {
+            background: #f7f5ec;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            margin: 0px 25px;
+            padding: 30px 70px;
+        }
+        
+        .our-team .pic {
+            display: inline-block;
+            width: 130px;
+            height: 130px;
+            margin-bottom: 0px;
+            z-index: 1;
+            position: relative;
+        }
+        
+        .our-team .pic::before {
+            content: "";
+            width: 100%;
+            height: 0;
+            border-radius: 50;
+            background: #1785eb;
+            position: absolute;
+            bottom: 135%;
+            right: 0;
+            left: 0;
+            opacity: 0.2;
+            transform: scale(3);
+            transition: all 0.3s linear 0s;
+        }
+        
+        .our-team:hover .pic::before {
+            height: 100%;
+        }
+        
+        .our-team .pic::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #1785eb;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        
+        .our-team .pic img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform: scale(1);
+            transition: all 0.9s ease 0s;
+        }
+        
+        .our-team:hover .pic img {
+            box-shadow: 0 0 0 14px #f7f5ec;
+            transform: scale(0.7);
+        }
+        
+        .our-team .title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #4e5052;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .our-team {
+            display: block;
+            font-size: 15px;
+            color: #4e5052;
+        }
+        
+        #about h1 {
+            text-align: center;
+            color: black;
+            font-size: 35px;
+            background-color: lightcoral;
+        }
+        
+        .our-team .post {
+            display: block;
+            font-size: 15px;
+            color: #4e5052;
+        }
+        
+        .about {
+            margin-top: 50px;
+        }
+        
+        .about h1 {
+            background-color: lightcoral;
+            padding: 10px;
+        }
+        
+        .about-content {
+            text-align: center;
+        }
+        
+        .about-content p {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .about-content .thank {
+            text-align: left;
+            margin-left: 400px;
+            font-size: 25px;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+        
+        .image {
+            width: 100%;
+        }
+        
+        .image img {
+            width: 80%;
+            height: 600px;
+            margin-top: 50px;
+            margin-left: 150px;
+        }
+        
+        @media (max-width:767px) {
+            #about h1 {
+                text-align: center;
+                color: #1785eb;
+                font-size: 45px;
+            }
+            .container {
+                flex-direction: column;
+            }
+            .our-team {
+                width: 80%;
+                margin-top: 30px;
+            }
+            .our-team .post {
+                display: block;
+                font-size: 15px;
+                color: #4e5052;
+            }
+            .about-content {
+                text-align: center;
+                font-size: 30px;
+            }
+            .about-content p {
+                font-size: 30px;
+                text-align: center;
+            }
+            .about-content .thank {
+                text-align: left;
+                margin-left: 400px;
+                font-size: 5px;
+                font-weight: bold;
+            }
+            .image img {
+                width: 400px;
+                margin-top: 40px;
+                margin-left: 10px;
+                height: 400px;
+                text-align: center;
+                position: sticky;
+            }
+        }
+        
+        @media (max-width:1200px) {
+            .about-content p {
+                font-size: 10px;
+            }
+            .about .image img {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width:1024px) {
+            .about .image img {
+                width: 100%;
+                margin-left: 0;
+            }
+            .vid video {
+                width: 100%;
+            }
+            .vid {
+                padding: 20px 60px;
+                float: left;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width:568px) {
+            #about h1 {
+                text-align: center;
+                color: #1785eb;
+                font-size: 45px;
+            }
+            .container {
+                flex-direction: column;
+                margin-top: -100px;
+            }
+            .our-team {
+                width: 80%;
+                margin-top: 30px;
+            }
+            .our-team .post {
+                display: block;
+                font-size: 15px;
+                color: #4e5052;
+            }
+            .about-content {
+                text-align: center;
+                position: sticky;
+            }
+            .about-content p {
+                font-size: 10px;
+                text-align: center;
+            }
+            .about-content .thank {
+                text-align: left;
+                margin-left: 400px;
+                font-size: 5px;
+                font-weight: bold;
+            }
+            .image img {
+                width: 90%;
+                max-height: 300px;
+                margin-left: 20px;
+                margin-top: 40px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="about " class="about ">
+        <center>
+            <h1><b>ABOUT POOJA EDUCATION CAMPUS</b></h1>
+        </center>
+        <center><i class='fa fa-arrow-circle-down' style='font-size:48px;color:lightseagreen'></i></center>
+        <div class="container ">
+            <div class="our-team ">
+                <div class="pic ">
+                    <img src="assets\img/abc.JPEG " alt=" ">
+                </div>
+                <div class="team-content ">
+                    <h3 class="title ">(S.K.PATEL)</h3>
+                    <span class="post ">MANAGING DIRECTOR <br>OF <br>POOJA EDUCATION CAMPUS</span>
+                </div>
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="our-team ">
+                <div class="pic ">
+                    <img src="assets\img/cde.JPEG " alt=" ">
+                </div>
+                <div class="team-content ">
+                    <h3 class="title ">(D.S.PATEL)</h3>
+                    <span class="post ">MANAGING DIRECTOR <br>OF <br>POOJA EDUCATION CAMPUS</span>
+                </div>
+            </div>
+        </div>
+        <div class="image ">
+            <img src="assets\img/school.JPG ">
+        </div>
+        <div class="about-content ">
+            <p>POOJA EDUCATION CAMPUS Situated at well developed C.T.M. area in Ahmedabad city.</br> It runs different educational branches such as Pooja pre-primary school,Pooja Primary school,</br> Pooja secondary school, Pooja Higher Secondary school,
+                Saffron English medium </br>school, Shree Umiya College of Education (B.Ed).All these branches are conducted by</br> Trust and Umiya Education Trust. We are providing the best education to the </br>students of our area.The students study
+                here are belong to middle class families. We </br>provide them affordable education. We have the most experienced and competent Teachers </br>and Trainers who enable the students to face any kind of hardship. Our teachers always try </br>to
+                encourage the students to participate in different educational and co-curriculer activities.</br> We celebrate different national and religious festivals with great enthusiasm with our students.Our </br>institute is working for the overall
+                development of our students. Our purpose is</br>
+                to prepare the best citizens and sculptors for the society.Our B.Ed. college has successfully </br>completed 8 years in preparing excellent teachers with proper responsibility and </br>tough efforts. We will do the same in future too.</br>
+                </br>
+                <b>THANKS ALL FOR YOUR TRUST.</b></div>
+        </p>
+    </div>
+</body>
+
+</html>
